@@ -5,28 +5,28 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.aaa {
+.matrix-wrapper {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.matrix-wrapper img {
   width: 100%;
 }
 
-.aaa .more-inf {
+.matrix-wrapper .matrix-wrapper__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-  .aaa {
+  .matrix-wrapper {
     text-align: center;
   }
 }
 
-.centered-main-page-element {
+.content {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -140,13 +140,13 @@ li>input[type="text"] {
   width: 226px
 }
 
-button.delete img {
+button.delete-button img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+button.delete-button img:hover {
   transform: rotateZ(0);
 }
 
