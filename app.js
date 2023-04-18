@@ -30,18 +30,22 @@ var createNewTaskElement = function (taskString) {
   var deleteButtonImg = document.createElement('img'); //delete button image
 
   label.innerText = taskString;
-  label.className = 'task';
+  label.className = 'label-task';
+  listItem.className = 'list__item item';
 
   //Each elements, needs appending
   checkBox.type = 'checkbox';
+  checkBox.className = 'item__input-checkbox';
+
   editInput.type = 'text';
-  editInput.className = 'task';
+  editInput.className = 'input-task item__input-text';
 
   editButton.innerText = 'Edit'; //innerText encodes special characters, HTML does not.
-  editButton.className = 'edit-button';
+  editButton.className = 'edit-button button';
 
-  deleteButton.className = 'delete-button';
+  deleteButton.className = 'delete-button button';
   deleteButtonImg.src = './remove.svg';
+  deleteButtonImg.className = 'delete-button__img';
   deleteButton.appendChild(deleteButtonImg);
 
   //and appending.
@@ -77,7 +81,7 @@ var editTask = function () {
   var editInput = listItem.querySelector('input[type=text]');
   var label = listItem.querySelector('label');
   var editBtn = listItem.querySelector('.edit-button');
-  var containsClass = listItem.classList.contains('editMode');
+  var containsClass = listItem.classList.contains('edit-mode');
   //If class of the parent is .editmode
   if (containsClass) {
     //switch to .editmode
@@ -90,7 +94,7 @@ var editTask = function () {
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle('editMode');
+  listItem.classList.toggle('edit-mode');
 };
 
 //Delete task.
