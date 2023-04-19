@@ -58,6 +58,7 @@ button {
 
 .new-task__row {
   display: flex;
+  padding: 20px 0;
 }
 
 .button {
