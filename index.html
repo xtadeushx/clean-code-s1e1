@@ -1,57 +1,70 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Todo App</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
-  <link rel='stylesheet' href='style.css' media='screen' charset='utf-8'>
+  <link rel='stylesheet' href='style.css' media='screen'>
+  <title>Todo App</title>
 </head>
 
 <body>
-  <div class='matrix-wrapper'>
-    <img class='matrix-wrapper__img' src='./eisenhower-matrix.jpg'>
-    <a class='matrix-wrapper__link' href='https://goal-life.com/page/method/matrix-eisenhower'>Want more details?</a>
-  </div>
-  <div class='content'>
-    <div id='add-item'>
-      <label class='new-task__label' for='new-task'>Add Item</label>
-      <div class='task-row-wrapper'>
-        <input id='new-task' class='input-task  item__input-text' type='text'>
-        <button class='add-button button' id='delete-button'>Add</button>
-      </div>
+  <main>
+    <div class='matrix-wrapper'>
+      <img class='matrix-wrapper__img' src='./eisenhower-matrix.jpg' alt='Eisenhower matrix'>
+      <a class='matrix-wrapper__link' href='https://goal-life.com/page/method/matrix-eisenhower'>Want more details?</a>
     </div>
-    <h3 class='title'>Todo</h3>
-    <ul id='incomplete-tasks' class='content-list content-list--incompleted list'>
-      <li class='list__item item'>
-        <input type='checkbox' class='item__input-checkbox'>
-        <label class='label-task'>Pay Bills</label>
-        <input type='text' class='input-task item__input-text'>
-        <button class='edit-button button'>Edit</button>
-        <button class='delete-button button'>
-          <img class='delete-button__img' src='./remove.svg'>
-        </button>
-      </li>
-      <li class='edit-mode item'>
-        <input type='checkbox' class='item__input-checkbox'>
-        <label class='label-task'>Go Shopping</label>
-        <input type='text' value='Go Shopping' class='input-task item__input-text'>
-        <button class='edit-button button'>Save</button>
-        <button class='delete-button button'>
-          <img class='delete-button__img' src='./remove.svg'>
-        </button>
-      </li>
-    </ul>
-    <h3 class='title'>Completed</h3>
-    <ul id='completed-tasks' class='content-list list content-list--completed'>
-      <li class='list__item item'>
-        <input type='checkbox' class='item__input-checkbox' checked>
-        <label class='label-task'>See the Doctor</label>
-        <input type='text' class='input-task item__input-text'>
-        <button class='edit-button button'>Edit</button>
-        <button class='delete-button button'>
-          <img class='delete-button__img' src='./remove.svg'>
-        </button>
-      </li>
-    </ul>
-  </div>
+    <div class='content'>
+      <section id='add-item' class="new-task__wrapper">
+        <h2 class='title new-task__wrapper-title'>Add Item</h2>
+        <div class='new-task__row'>
+          <input id='new-task' class='new-task__input input-task  item__input-text' type='text'>
+          <button class='add-button button new-task__button' id='delete-button'>Add</button>
+        </div>
+      </section>
+      <section class="tasks-wrapper">
+        <h2 class='title'>Todo</h2>
+        <ul id='incomplete-tasks' class='content-list content-list--incompleted list'>
+          <li class='list__item item'>
+            <input type='checkbox' class='item__input-checkbox'>
+            <label class='label-task'>Pay Bills</label>
+            <input type='text' class='input-task item__input-text'>
+            <button class='edit-button button'>Edit</button>
+            <button class='delete-button button'>
+              <img class='delete-button__img' src='./remove.svg' alt='remove button'>
+            </button>
+          </li>
+          <li class='edit-mode item'>
+            <input type='checkbox' class='item__input-checkbox'>
+            <label class='label-task'>Go Shopping</label>
+            <input type='text' value='Go Shopping' class='input-task item__input-text'>
+            <button class='edit-button button'>Save</button>
+            <button class='delete-button button'>
+              <img class='delete-button__img' src='./remove.svg' alt='remove button'>
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="tasks-wrapper">
+        <h2 class='title'>Completed</h2>
+        <ul id='completed-tasks' class='content-list list content-list--completed'>
+          <li class='list__item item'>
+            <input type='checkbox' class='item__input-checkbox' checked>
+            <label class='label-task'>See the Doctor</label>
+            <input type='text' class='input-task item__input-text'>
+            <button class='edit-button button'>Edit</button>
+            <button class='delete-button button'>
+              <img class='delete-button__img' src='./remove.svg' alt='remove button'>
+            </button>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
   <script src='app.js'></script>
 </body>
+
+</html>
