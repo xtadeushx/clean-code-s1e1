@@ -58,7 +58,6 @@ button {
 
 .new-task__row {
   display: flex;
-  padding: 20px 0;
 }
 
 .button {
@@ -105,7 +104,12 @@ button {
 }
 
 /* New Task */
-.new-task__label {
+/* .new-task__label {
+  display: block;
+  margin: 0 0 20px;
+} */
+
+.new-task__wrapper-title {
   display: block;
   margin: 0 0 20px;
 }
