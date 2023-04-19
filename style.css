@@ -56,7 +56,7 @@ button {
   flex-grow: 1
 }
 
-.task-row-wrapper {
+.new-task__row {
   display: flex;
 }
 
